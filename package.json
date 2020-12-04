@@ -1,0 +1,32 @@
+{
+  "name": "bootcamp-hot-restaurant",
+  "version": "1.0.0",
+  "description": "Hot Restaurant from Georgia Tech Bootcamp Chapter 11 Exercise 15",
+  "main": "hot-restaurant-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gehanstedt/bootcamp-hot-restaurant.git"
+  },
+  "keywords": [
+    "Georgia",
+    "Tech",
+    "Bootcamp",
+    "Hot",
+    "Restaurant",
+    "Node.js",
+    "Express"
+  ],
+  "author": "Greg Hanstedt",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/gehanstedt/bootcamp-hot-restaurant/issues"
+  },
+  "homepage": "https://github.com/gehanstedt/bootcamp-hot-restaurant#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
