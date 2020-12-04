@@ -73,7 +73,8 @@ app.get("/api/waitlist", function(req, res) {
 });
 
 // Clear all reservations and waitlist
-app.get("/api/clear", function(req, res) {
+app.post("/api/clear", function(req, res) {
+  console.log ("Clearing both reservations and waitList");
   waitList = [];
   reservations = [];
   return res.json(true);
