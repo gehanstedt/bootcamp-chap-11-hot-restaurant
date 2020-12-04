@@ -49,17 +49,17 @@ var waitList = [];
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "main.html"));
+  res.sendFile(path.join(__dirname, "./public/main.html"));
   console.log (`User requested main.html via "/" route.`);
 });
 
 app.get("/tables", function(req, res) {
-  res.sendFile(path.join(__dirname, "tables.html"));
+  res.sendFile(path.join(__dirname, "./public/tables.html"));
   console.log (`User requested main.html via "/tables" route.`);
 });
 
 app.get("/reserve", function(req, res) {
-  res.sendFile(path.join(__dirname, "reserve.html"));
+  res.sendFile(path.join(__dirname, "./public/reserve.html"));
 });
 
 // Displays all reservations
@@ -80,25 +80,7 @@ app.post("/api/clear", function(req, res) {
   return res.json(true);
 });
 
-
-/* This shouldn't be needed *
-// Displays a single character, or returns false
-app.get("/api/characters/:character", function(req, res) {
-  var chosen = req.params.character;
-
-  console.log(chosen);
-
-  for (var i = 0; i < characters.length; i++) {
-    if (chosen === characters[i].routeName) {
-      return res.json(characters[i]);
-    }
-  }
-
-  return res.json(false);
-});
-*/
-
-// Create New Characters - takes in JSON input
+// Create New Reservation - takes in JSON input
 app.post("/api/tables", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body parsing middleware
